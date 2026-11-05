@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lowongan Kerja - Operation Management Talent</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #334155;
+            --border: #cbd5e1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 750px;
+            background: var(--card);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 26px;
+        }
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .criteria-box {
+            background: #f1f5f9;
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        .criteria-box h3 {
+            margin: 0 0 8px 0;
+            color: var(--primary);
+            font-size: 15px;
+        }
+        .criteria-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .criteria-box li {
+            margin-bottom: 4px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--primary);
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        textarea {
+            resize: vertical;
+            height: 90px;
+        }
+        button {
+            width: 100%;
+            padding: 13px;
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #1d4ed8;
+        }
+        .footer-note {
+            text-align: center;
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <span class="badge">REKRUTMEN TERBUKA</span>
+            <h1>Operation Management Talent</h1>
+            <p>Bergabunglah bersama tim profesional kami dan kembangkan karier manajerial Anda.</p>
+        </div>
+
+        <div class="criteria-box">
+            <h3>Kualifikasi Persyaratan:</h3>
+            <ul>
+                <li>Pendidikan minimal **D3 (Semua Jurusan)**</li>
+                <li>Usia maksimum **35 tahun**</li>
+                <li>Memiliki jiwa kepemimpinan, analitis, dan orientasi pada operasional</li>
+                <li>Bersedia mengikuti seluruh tahapan seleksi rekrutmen</li>
+            </ul>
+        </div>
+
+        <form action="#" method="POST" id="applyForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap (Sesuai KTP) *</label>
+                <input type="text" id="nama" name="nama" required placeholder="Contoh: Rian Pratama">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Alamat Email Aktif *</label>
+                <input type="email" id="email" name="email" required placeholder="Contoh: rian@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="whatsapp">Nomor WhatsApp *</label>
+                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="Contoh: 081234567890">
+            </div>
+
+            <div class="form-group">
+                <label for="usia">Usia Saat Ini (Tahun) *</label>
+                <input type="number" id="usia" name="usia" max="35" required placeholder="Maksimal 35 tahun">
+            </div>
+
+            <div class="form-group">
+                <label for="pendidikan">Pendidikan Terakhir *</label>
+                <select id="pendidikan" name="pendidikan" required>
+                    <option value="">-- Pilih Pendidikan --</option>
+                    <option value="D3">Diploma 3 (D3)</option>
+                    <option value="D4/S1">Diploma 4 / Strata 1 (D4/S1)</option>
+                    <option value="S2">Strata 2 (S2)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="jurusan">Jurusan Kuliah *</label>
+                <input type="text" id="jurusan" name="jurusan" required placeholder="Contoh: Manajemen, Teknik Industri, dll.">
+            </div>
+
+            <div class="form-group">
+                <label for="pengalaman">Ringkasan Pengalaman Kerja / Keahlian Operasional</label>
+                <textarea id="pengalaman" name="pengalaman" placeholder="Ceritakan singkat pengalaman kerja atau keunggulan Anda di bidang operasional..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="link_cv">Tautan Google Drive CV / Resume (Pastikan Akses Publik) *</label>
+                <input type="text" id="link_cv" name="link_cv" required placeholder="https://drive.google.com/...">
+            </div>
+
+            <button type="submit">Kirim Lamaran Sekarang</button>
+        </form>
+
+        <div class="footer-note">
+            &copy; 2026 Recruitment Department. Seluruh data pelamar dijaga kerahasiaannya.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('applyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const usia = parseInt(document.getElementById('usia').value);
+            
+            if(usia > 35) {
+                alert('Mohon maaf, batas usia maksimal untuk posisi ini adalah 35 tahun.');
+                return;
+            }
+
+            alert('Terima kasih! Lamaran untuk posisi Operation Management Talent berhasil dikirim.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
